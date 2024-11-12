@@ -1,49 +1,50 @@
 // ToyCar constructor function
-function ToyCar(name, color, model, scale, material, price, manufacturer, speed, batteryLife, remoteControlled) {
+function ToyCar(name, brand, model, color, scale, material, price, packaging, vehicleType, SKU, UPC) {
     this.name = name;
-    this.color = color;
+    this.brand = brand;
     this.model = model;
+    this.color = color;
     this.scale = scale;
     this.material = material;
     this.price = price;
-    this.manufacturer = manufacturer;
-    this.speed = speed;
-    this.batteryLife = batteryLife;
-    this.remoteControlled = remoteControlled;
-
-    
+    this.packaging = packaging;
+    this.vehicleType = vehicleType;
+    this.SKU = SKU;
+    this.UPC = UPC;
   
     // Method to display car details
     this.displayInfo = function () {
       return `
         <h2>${this.name}</h2>
-        <p><strong>Color:</strong> ${this.color}</p>
+        <p><strong>Brand:</strong> ${this.brand}</p>
         <p><strong>Model:</strong> ${this.model}</p>
+        <p><strong>Color:</strong> ${this.color}</p>
         <p><strong>Scale:</strong> ${this.scale}</p>
         <p><strong>Material:</strong> ${this.material}</p>
         <p><strong>Price:</strong> $${this.price}</p>
-        <p><strong>Manufacturer:</strong> ${this.manufacturer}</p>
-        <p><strong>Top Speed:</strong> ${this.speed} km/h</p>
-        <p><strong>Battery Life:</strong> ${this.batteryLife} hours</p>
-        <p><strong>Remote Controlled:</strong> ${this.remoteControlled ? "Yes" : "No"}</p>
+        <p><strong>Packaging:</strong> ${this.packaging}</p>
+        <p><strong>Vehicle Type:</strong> ${this.vehicleType}</p>
+        <p><strong>SKU:</strong> ${this.SKU}</p>
+        <p><strong>UPC:</strong> ${this.UPC}</p>
       `;
     };
   }
   
-  // Create an instance of the toy car
-  const myToyCar = new ToyCar("Speedster", "Red", "SP100", "1:18", "Plastic", 29.99, "ToyMaker Inc.", 50, 2, true);
-  function updateCar() {
-    const newColor = document.getElementById("newColor").value;
-    const newSpeed = document.getElementById("newSpeed").value;
-  
-    if (newColor) myToyCar.color = newColor;
-    if (newSpeed) myToyCar.speed = parseInt(newSpeed);
-  
-    // Re-display the updated car details
-    document.getElementById("car-display").innerHTML = myToyCar.displayInfo();
-  }
-  
+  // Create an instance of the Rubicon toy car
+  const rubicon = new ToyCar(
+    "2018 Jeep Wrangler Rubicon Open Top", // name
+    "Kinsmart",                            // brand
+    "Wrangler Rubicon Open Top",           // model
+    "White",                               // color
+    "1/34 Scale",                          // scale
+    "Diecast Metal",                       // material
+    6.99,                                  // price
+    "Loose",                               // packaging
+    "SUV",                                 // vehicleType
+    "5412DA/WT-KIT-WHITE",                 // SKU
+    "680334687919"                         // UPC
+  );
   
   // Display car information on the webpage
-  document.getElementById("car-display").innerHTML = myToyCar.displayInfo();
+  document.getElementById("car-display").innerHTML = rubicon.displayInfo();
   
