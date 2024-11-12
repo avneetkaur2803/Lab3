@@ -10,6 +10,8 @@ function ToyCar(name, color, model, scale, material, price, manufacturer, speed,
     this.speed = speed;
     this.batteryLife = batteryLife;
     this.remoteControlled = remoteControlled;
+
+    
   
     // Method to display car details
     this.displayInfo = function () {
@@ -30,6 +32,17 @@ function ToyCar(name, color, model, scale, material, price, manufacturer, speed,
   
   // Create an instance of the toy car
   const myToyCar = new ToyCar("Speedster", "Red", "SP100", "1:18", "Plastic", 29.99, "ToyMaker Inc.", 50, 2, true);
+  function updateCar() {
+    const newColor = document.getElementById("newColor").value;
+    const newSpeed = document.getElementById("newSpeed").value;
+  
+    if (newColor) myToyCar.color = newColor;
+    if (newSpeed) myToyCar.speed = parseInt(newSpeed);
+  
+    // Re-display the updated car details
+    document.getElementById("car-display").innerHTML = myToyCar.displayInfo();
+  }
+  
   
   // Display car information on the webpage
   document.getElementById("car-display").innerHTML = myToyCar.displayInfo();
