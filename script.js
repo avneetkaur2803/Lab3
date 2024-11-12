@@ -47,4 +47,16 @@ function ToyCar(name, brand, model, color, scale, material, price, packaging, ve
   
   // Display car information on the webpage
   document.getElementById("car-display").innerHTML = rubicon.displayInfo();
+
+  function updateCar() {
+    const newColor = document.getElementById("newColor").value;
+    const newPrice = document.getElementById("newPrice").value;
+  
+    // Update properties if new values are provided
+    if (newColor) rubicon.color = newColor;
+    if (newPrice) rubicon.price = parseFloat(newPrice);
+  
+    // Re-display the updated car details
+    document.getElementById("car-display").innerHTML = rubicon.displayInfo();
+  }
   
