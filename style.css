@@ -1,18 +1,89 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffdefe;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
   }
+
+
   
-  h1 {
-    color: #333;
-  }
-  
+  /* Main container for the car display */
   #car-display {
-    margin: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for the car image */
+  #car-image {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  /* Car details section */
+  h2 {
+    font-size: 1.8em;
+    color: #060000;
+    margin-bottom: 15px;
+  }
+  
+  p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #0e0101;
+  }
+  
+  /* Button section for updates */
+  #modify-section {
     background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #modify-section input {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 2px solid #ddd;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+  }
+  
+  #modify-section button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 12px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  #modify-section button:hover {
+    background-color: #45a049;
+  }
+  
+  h3 {
+    text-align: center;
+    color: #100101;
+    font-size: 1.5em;
+    margin-bottom: 20px;
   }
   

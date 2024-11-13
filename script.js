@@ -1,4 +1,4 @@
-// ToyCar constructor function
+// ToyCar constructor function to define properties and methods 
 function ToyCar(name, brand, model, color, scale, material, price, packaging, vehicleType, SKU, UPC) {
     this.name = name;
     this.brand = brand;
@@ -30,7 +30,7 @@ function ToyCar(name, brand, model, color, scale, material, price, packaging, ve
     };
   }
   
-  // Create an instance of the Rubicon toy car
+  // Creating an instance of the Rubicon toy car
   const rubicon = new ToyCar(
     "2018 Jeep Wrangler Rubicon Open Top", // name
     "Kinsmart",                            // brand
@@ -45,14 +45,14 @@ function ToyCar(name, brand, model, color, scale, material, price, packaging, ve
     "680334687919"                         // UPC
   );
   
-  // Display car information on the webpage
+  // To Display car information on the webpage
   document.getElementById("car-display").innerHTML = rubicon.displayInfo();
 
   function updateCar() {
     const newColor = document.getElementById("newColor").value;
     const newPrice = document.getElementById("newPrice").value;
   
-    // Update properties if new values are provided
+    // To Update properties if new values are provided
     if (newColor) rubicon.color = newColor;
     if (newPrice) rubicon.price = parseFloat(newPrice);
   
