@@ -1,89 +1,83 @@
-/* Global Styles */
+/* Reset margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General body styling */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #ffdefe;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #d5e9fd; 
+}
 
+/* Header styling to position title at the top and center */
+header {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #f559ac; 
+  color: white;
+  position: sticky;
+  top: 0; 
+  z-index: 1000;
+}
 
-  
-  /* Main container for the car display */
-  #car-display {
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    max-width: 600px;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  
-  /* Styling for the car image */
-  #car-image {
-    width: 300px;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 20px;
-  }
-  
-  /* Car details section */
-  h2 {
-    font-size: 1.8em;
-    color: #060000;
-    margin-bottom: 15px;
-  }
-  
-  p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #0e0101;
-  }
-  
-  /* Button section for updates */
-  #modify-section {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 40px;
-    width: 80%;
-    max-width: 400px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  #modify-section input {
-    padding: 10px;
-    margin-bottom: 10px;
-    width: 100%;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    font-size: 1em;
-  }
-  
-  #modify-section button {
-    background-color: #4CAF50; /* Green */
-    color: white;
-    padding: 12px;
-    font-size: 1.1em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  #modify-section button:hover {
-    background-color: #45a049;
-  }
-  
-  h3 {
-    text-align: center;
-    color: #100101;
-    font-size: 1.5em;
-    margin-bottom: 20px;
-  }
-  
+/* H1 Title Styling */
+header h1 {
+  font-size: 2em;
+  color: white;
+}
+
+/* Container styling */
+#car-display, #modify-section {
+  width: 80%; /* Increased width for better readability */
+  max-width: 600px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin: 20px auto;
+  padding: 20px;
+  color: #333; 
+}
+
+/* Title styling inside content boxes */
+#car-display h2, #modify-section h3 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Input and label styling */
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="text"], input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #f559ac; 
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #fe309e; 
+}
